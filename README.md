@@ -124,21 +124,6 @@ Necessary when you modified prometheus-data.
 curl -X POST http://localhost:9090/-/reload
 ```
 
-### Prometheus Data
-
-```
-avg(rate(http_request_duration_ms_sum[1m]) / rate(http_request_duration_ms_count[1m])) by (service, route, method, code)
-```
-
-![Prometheus - Data](/images/prometheus-data.png)
-
-### Prometheus Alerts
-
-States of active alerts: `pending`, `firing`
-
-![Prometheus - Alert Pending](/images/prometheus-alert-pending.png)
-![Prometheus - Alert Firing](/images/prometheus-alert-firing.png)
-
 ## Grafana
 
 ### Run
